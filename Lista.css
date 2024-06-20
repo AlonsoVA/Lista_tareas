@@ -1,16 +1,49 @@
 .Titulo{
     display: flex;
-    align-content: center;
-    align-self: center;
     justify-content: center;
-    margin: 5px;
-    border: 5px #000000 solid;
-    border-radius: 9px;
+    text-align: center;
+    font-weight: 600;
+    color: #803D3B;
+}
+.Contenedor{
     width: 600px;
     height: 1500px;
+    background: #EADBC8;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40 px;
+    border: 3.5px black solid;
 }
-.Contenedor1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.Contenedor1 input{
+    width: 300px;
+    height: 30px;
+    background:#803D3B;
+    border: none;
+    outline: none;
+    border: 3px solid rgb(225, 225, 225, .2);
+    border-radius: 40px;
+}
+.boton{
+    width: 200px;
+    height: 30px;
+    background: #322C2B;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #DFD0B8;
+    font-weight: 600;
+}
+.Texto{
+    width: 200px;
+    height: 30px;
+    background: #322C2B;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #DFD0B8;
+    font-weight: 600;
 }
