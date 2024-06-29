@@ -53,3 +53,10 @@
     color: #AF8F6F;
     margin: 5px;
 }
+.Contenedor2{
+    background: #EADBC8;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40 px;
+    border: 3.5px black solid;
+}

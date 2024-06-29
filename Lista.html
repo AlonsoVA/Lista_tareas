@@ -13,16 +13,23 @@
                 <input type="text" name="Cont1" id="Cont" class="Texto">
                 <button type="submit" id="botonn" class="boton">Add</button>
             </div>
-            <div>
-                <p id="Lista"></p>
-                <!-- <ul id="Lista"></ul> -->
+            <br>
+            <div class="Contenedor2">
+                <ul id="Tpendientes">
+                    <button type="submit" id="botonn" class="boton">Completado</button>
+                    <button type="submit" id="botonn" class="boton">Eliminar</button>
+                    <p id="Lista"></p>
+                    <!-- <ul id="Lista"></ul> -->
+                </ul>
             </div>
+            <br>
             <script>
                 const textos = document.getElementById('botonn');
                 textos.addEventListener("click",addTarea);
                 function addTarea(){
                     let text = document.getElementById("Cont").value;
-                    document.getElementById("Lista").innerHTML+='<br> <div class="Eliminar"><li>'+text+'</li> <button id="Finish" class="End">Borrar</button> <button id="Complet" class="start">Completar</button></div>';
+                    const li = document.createElement('li');
+                    li.innerHTML = text;
                 }
             </script>
         </div>
