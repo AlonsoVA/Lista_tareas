@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="Lista.css">
+        <title>Lista de Tareas</title>
     </head>
     <body>
         <center><div class="Contenedor">
@@ -10,26 +11,64 @@
             </div>
         <center/>
             <div class="Contenedor1">
-                <input type="text" name="Cont1" id="Cont" class="Texto">
-                <button type="submit" id="botonn" class="boton">Add</button>
+                <form>
+                    <input type="text" name="Cont1" id="Cont" class="Texto">
+                    <button type="submit" id="botonn" class="boton">Add</button>
+                </form>
             </div>
             <br>
             <div class="Contenedor2">
-                <ul id="Tpendientes">
-                    <button type="submit" id="botonn" class="boton">Completado</button>
-                    <button type="submit" id="botonn" class="boton">Eliminar</button>
-                    <p id="Lista"></p>
-                    <!-- <ul id="Lista"></ul> -->
+                <ul>
+
                 </ul>
+                <div class="Noti">
+                    <p>No hay Pendientes. :)</p>
+                </div>
             </div>
             <br>
             <script>
-                const textos = document.getElementById('botonn');
-                textos.addEventListener("click",addTarea);
-                function addTarea(){
-                    let text = document.getElementById("Cont").value;
-                    const li = document.createElement('li');
-                    li.innerHTML = text;
+                // Constantes 
+                const addB = document.querySelector(".boton");
+                const input = document.querySelector('input');
+                const ul = document.querySelector("ul");
+                const empty = document.querySelector('.Noti')
+
+                addB.addEventListener("click", (e) =>{
+                    e.preventDefault();
+
+                    const text = input.value
+
+                    if (text!== ""){
+                        const li = document.createElement('li');
+                    const p = document.createElement('p');
+                    p.textContent = text;
+
+                    li.appendChild(p);
+                    li.appendChild(addDeletebtn());
+                    ul.appendChild(li);
+
+                    input.value = "";
+                    Noti.style.display = "none";
+                    }
+                })
+
+                function addDeletebtn(){
+                    const deleteBtn = document.createElement("button");
+
+                    deleteBtn.textContent = "Borrar";
+                    deleteBtn.className = "btn-delete";
+
+                    deleteBtn.addEventListener("click",(e) => {
+                        const item = e.target.parentElement;
+                        ul.removeChild(item);
+
+                        const items = document.querySelectorAll('li');
+
+                        if(items.length === 0){
+                            Noti.style.display = "block";
+                        }
+                    });
+                    return deleteBtn;
                 }
             </script>
         </div>
