@@ -8,11 +8,14 @@
 .Contenedor{
     width: 600px;
     height: 1500px;
-    background: #EADBC8;
+    background:transparent;
     color: #fff;
     border-radius: 10px;
     padding: 30px 40 px;
-    border: 3.5px black solid;
+    border: 3.5px transparent;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
 }
 .Contenedor1 input{
     width: 300px;
@@ -22,18 +25,6 @@
     outline: none;
     border: 3px solid rgb(225, 225, 225, .2);
     border-radius: 40px;
-}
-.boton{
-    width: 200px;
-    height: 30px;
-    background: #322C2B;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #DFD0B8;
-    font-weight: 600;
 }
 .Texto{
     width: 200px;
@@ -54,9 +45,68 @@
     margin: 5px;
 }
 .Contenedor2{
-    background: #EADBC8;
+    background: transparent;
     color: #fff;
     border-radius: 10px;
     padding: 30px 40 px;
-    border: 3.5px black solid;
+    border: 3.5px transparent;
+    margin: 10px;
+    text-align: center;
+}
+.Contenedor2 ul{
+    color: #B99470;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+}
+.Contenedor2 button{
+    width: 200px;
+    height: 30px;
+    background: #322C2B;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #DFD0B8;
+    font-weight: 600;
+}
+.Noti{
+    text-align:center;
+    text-decoration: #803D3B;
+}
+.boton{
+    width: 200px;
+    height: 30px;
+    background: #322C2B;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #DFD0B8;
+    font-weight: 600;
+}
+#Videos{
+    min-height: 100vh;
+    position: relative;
+    margin: 15px;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
 }
