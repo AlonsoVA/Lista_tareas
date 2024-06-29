@@ -47,3 +47,9 @@
     color: #DFD0B8;
     font-weight: 600;
 }
+.Eliminar{
+    display: flex;
+    flex-wrap: wrap;
+    color: #AF8F6F;
+    margin: 5px;
+}

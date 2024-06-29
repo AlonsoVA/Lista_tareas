@@ -11,8 +11,20 @@
         <center/>
             <div class="Contenedor1">
                 <input type="text" name="Cont1" id="Cont" class="Texto">
-                <button type="submit" class="boton">Add</button>
+                <button type="submit" id="botonn" class="boton">Add</button>
             </div>
+            <div>
+                <p id="Lista"></p>
+                <!-- <ul id="Lista"></ul> -->
+            </div>
+            <script>
+                const textos = document.getElementById('botonn');
+                textos.addEventListener("click",addTarea);
+                function addTarea(){
+                    let text = document.getElementById("Cont").value;
+                    document.getElementById("Lista").innerHTML+='<br> <div class="Eliminar"><li>'+text+'</li> <button id="Finish" class="End">Borrar</button> <button id="Complet" class="start">Completar</button></div>';
+                }
+            </script>
         </div>
     </body>
 </html>
